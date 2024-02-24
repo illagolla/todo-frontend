@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Grocery shopping",
+    "description": "Need milk, eggs, bread, and vegetables.",
+    "isCompleted": false
+  },
+  {
+    "id": 2,
+    "title": "Clean the house",
+    "description": "Vacuum, dust, and mop the floors. Wipe down counters.",
+    "isCompleted": true
+  },
+  {
+    "id": 3,
+    "title": "Finish work project",
+    "description": "Write the final report and submit it by tomorrow.",
+    "isCompleted": false
+  },
+  {
+    "id": 4,
+    "title": "Call Mom",
+    "description": "Catch up and see how she's doing.",
+    "isCompleted": true
+  },
+  {
+    "id": 5,
+    "title": "Pay bills",
+    "description": "Rent, electricity, and credit card bill.",
+    "isCompleted": true
+  },
+  {
+    "id": 6,
+    "title": "Read a book",
+    "description": "Finally finish that novel I started months ago.",
+    "isCompleted": false
+  },
+  {
+    "id": 7,
+    "title": "Go for a walk",
+    "description": "Get some fresh air and exercise.",
+    "isCompleted": false
+  },
+  {
+    "id": 8,
+    "title": "Learn a new skill",
+    "description": "Start that online coding course I've been thinking about.",
+    "isCompleted": true
+  },
+  {
+    "id": 9,
+    "title": "Organize my closet",
+    "description": "Get rid of clothes I don't wear anymore.",
+    "isCompleted": false
+  },
+  {
+    "id": 10,
+    "title": "Water the plants",
+    "description": "Don't let them die!",
+    "isCompleted": true
+  }
+]
