@@ -3,6 +3,7 @@ import TaskCard from "./TaskCard";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { toast } from "react-toastify";
+import Loading from "../pages/Loading";
 
 export interface Task {
   id: number;
@@ -14,11 +15,14 @@ export interface Task {
 const TaskList = () => {
 
   const [taskList, setTaskList] = useState<Task[]>([]);
+  const [loading, setLoading] = useState<Boolean>(false);
 
   const fetchData = async () => {
     try {
+      setLoading(true)
       const res = await axios.get('/api/task');
       setTaskList(res.data);
+      setLoading(false)
       console.log(res.data);
     } catch (err) {
       console.log(err);
@@ -51,6 +55,10 @@ const TaskList = () => {
       }
       return task
     }))
+  }
+
+  if (loading) {
+    return <Loading/>
   }
 
   if (taskList && taskList.length === 0) {
