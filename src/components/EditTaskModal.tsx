@@ -12,6 +12,7 @@ const EditTaskModal = ({ updateTaskList }: any) => {
   const [isCompleted, setIsCompleted] = useState<boolean>(false);
   const [descriptionError, setDescriptionError] = useState<string>("");
 
+
   const { isModalopen, taskObj } = useSelector(
     (state: RootState) => state.modal
   );
@@ -24,7 +25,6 @@ const EditTaskModal = ({ updateTaskList }: any) => {
 
   const dispatch = useDispatch();
 
-  
 
   const submitHandle = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -40,7 +40,9 @@ const EditTaskModal = ({ updateTaskList }: any) => {
       if (res) {
         updateTaskList(res.data)
         toast.success('Task Updated!')
+        setDescriptionError("")
         dispatch(closeModal())
+        window.location.reload();
       }
     } catch (error) {
       console.log(error);
@@ -55,6 +57,11 @@ const EditTaskModal = ({ updateTaskList }: any) => {
     }
     }
 
+  }
+
+  const CloseHandle = ()=>{
+    dispatch(closeModal())
+    window.location.reload();
   }
 
   return (
@@ -108,7 +115,7 @@ const EditTaskModal = ({ updateTaskList }: any) => {
         </form>
         <button
           className="close-modal-btn"
-          onClick={() => dispatch(closeModal())}
+          onClick={CloseHandle}
         >
           <FaTimes />
         </button>
